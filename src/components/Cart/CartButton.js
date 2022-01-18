@@ -11,17 +11,12 @@ const CartButton = props => {
 		dispatch(actions.uiActions.toggle())
 	}
 
-	const testAsyncActions = () => {
-		dispatch(actions.cartAsyncActions.fetchDummyJSON())
-	}
-
 	return (
 		<>
 			<button className={classes.button} onClick={toggleCartHandler}>
 				<span>My Cart</span>
 				<span className={classes.badge}>{totalItems}</span>
 			</button>
-			<button onClick={testAsyncActions}>Test</button>
 		</>
 	)
 }
